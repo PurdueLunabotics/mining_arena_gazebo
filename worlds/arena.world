@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<sdf version="1.4">
+  <world name="arena">
+
+    <!-- A global light source -->
+
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <!-- apriltag localization board -->
+    <include>
+      <uri>model://apriltag_board</uri>
+      <pose>0 0 0.34 0 1.57 0</pose>
+    </include>
+
+    <!-- arena frame boundary 
+    First 3.615m is obstacle zone.
+    Last 3.268 is excavation zone. 
+    -->
+    <include>
+      <uri>model://arena_frame</uri>
+      <pose frame=''>0 0 0 0 -0 0</pose>
+    </include>
+
+    <!--
+      INSERT OBSTACLES HERE
+    -->
+
+    <!-- Own physics settings to speed up simulation -->
+    <physics type='ode'>
+      <max_step_size>0.01</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>100</real_time_update_rate>
+      <gravity>0 0 -9.81</gravity>
+    </physics>
+  </world>
+</sdf>
