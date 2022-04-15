@@ -27,6 +27,23 @@
       <pose frame=''>0 0 0 0 -0 0</pose>
     </include>
 
+    <population name="obs_population1">
+      <model name="obs1">
+        <include>
+          <static>true</static>
+          <uri>model://obstacle</uri>
+        </include>
+      </model>
+      <pose>1.8 0 0 0 0 0</pose>
+      <box>
+        <size>2 2 0.01</size>
+      </box>
+      <model_count>5</model_count>
+      <distribution>
+        <type>random</type>
+      </distribution>
+    </population>
+
     <!--
       INSERT OBSTACLES HERE
     -->
