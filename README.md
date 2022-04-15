@@ -19,5 +19,7 @@ export GAZEBO_PLUGIN_PATH=~/catkin_ws/devel/lib:$GAZEBO_PLUGIN_PATH
 ```
 3. Run with `gazebo arena.world` to visualize (ensure gazebo is installed)
 
+![sim_nav_gazebo](https://user-images.githubusercontent.com/41026849/163585429-cf9080de-40e7-4be1-9648-d75ab31ae4af.png)
+
 ## Credits
 Apriltag assets from https://github.com/koide3/gazebo_apriltag
