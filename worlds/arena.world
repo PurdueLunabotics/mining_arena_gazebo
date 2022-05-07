@@ -34,11 +34,11 @@
           <uri>model://obstacle</uri>
         </include>
       </model>
-      <pose>1.8 0 0 0 0 0</pose>
+      <pose>3.0 0 0 0 0 0</pose>
       <box>
         <size>2 2 0.01</size>
       </box>
-      <model_count>5</model_count>
+      <model_count>3</model_count>
       <distribution>
         <type>random</type>
       </distribution>
