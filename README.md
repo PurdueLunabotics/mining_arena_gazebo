@@ -1,7 +1,7 @@
 # mining_arena_gazebo
 Gazebo world environments for the NASA competition
 ## What's in here?
-Lunabotics 2021-2022 competition arena assets and world files
+Lunabotics 2023-2024 competition arena assets and world files
 
 ## Models
 - Apriltag assets
