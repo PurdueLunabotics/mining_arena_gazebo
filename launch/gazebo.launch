@@ -1,23 +1,26 @@
 <launch>
+<env name="GAZEBO_MODEL_PATH" value="$(find mining_arena_gazebo)/models:$GAZEBO_MODEL_PATH" />
 
-	<arg name="world_name" default="empty_world"/>
-	<arg name="gazebo_gui" default="true"/>
-	<arg name="verbose" default="false"/>
-	<arg name="debug" default="false"/>
-	<arg name="paused" default="false"/>
-  	<arg name="initial_pose" default="-x 1.0 -y 0 -z 0"/>
-    <arg default="$(find dummy_bot_description)/urdf/dummy_bot.xacro" name="model"/>
+<!-- depreciated, but may still be needed on older gazebo versions. sets plugin path, replace catkin_ws with your own ros wkspace -->
+<!-- <env name="GAZEBO_PLUGIN_PATH" value="~/catkin_ws/devel/lib:$GAZEBO_PLUGIN_PATH" /> -->
 
-	<!-- push robot_description to factory and spawn robot in gazebo -->
-	<node name="spawn_gazebo_model" pkg="gazebo_ros" type="spawn_model" args="-urdf -param robot_description -model robot $(arg initial_pose)"
-		respawn="false" output="screen" />
+<arg name="world_name" default="empty_world"/>
+<arg name="gazebo_gui" default="true"/>
+<arg name="verbose" default="false"/>
+<arg name="debug" default="false"/>
+<arg name="paused" default="false"/>
+<arg name="initial_pose" default="-x 1.0 -y 0 -z 0"/>
+<arg default="$(find dummy_bot_description)/urdf/dummy_bot.xacro" name="model"/>
 
-	<!-- startup simulated world -->
-	<include file="$(find gazebo_ros)/launch/empty_world.launch" >
-		<arg name="world_name" value="$(arg world_name)"/>
-		<arg name="paused" value="$(arg paused)"/>
-		<arg name="gui" value="$(arg gazebo_gui)"/>
-		<arg name="verbose" value="$(arg verbose)"/>
-		<arg name="debug" value="$(arg debug)"/>
-	</include>
+<!-- push robot_description to factory and spawn robot in gazebo -->
+<node name="spawn_gazebo_model" pkg="gazebo_ros" type="spawn_model" args="-urdf -param robot_description -model robot $(arg initial_pose)" respawn="false" output="screen" />
+
+<!-- startup simulated world -->
+<include file="$(find gazebo_ros)/launch/empty_world.launch" >
+ <arg name="world_name" value="$(arg world_name)"/>
+ <arg name="paused" value="$(arg paused)"/>
+ <arg name="gui" value="$(arg gazebo_gui)"/>
+ <arg name="verbose" value="$(arg verbose)"/>
+ <arg name="debug" value="$(arg debug)"/>
+</include>
 </launch>
