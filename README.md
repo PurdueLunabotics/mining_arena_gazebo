@@ -1,5 +1,6 @@
 # mining_arena_gazebo
 Gazebo world environments for the NASA competition
+
 ## What's in here?
 Lunabotics 2021-2022 competition arena assets and world files
 
@@ -9,15 +10,21 @@ Lunabotics 2021-2022 competition arena assets and world files
 ## Worlds
 - arena.world: Full arena with apriltags
 
-## Setup
-1. Ensure that repo is placed at `purdue_lunabotics/lunabot_sim/<here>`
-2. Add models and plugins to ~/.bashrc to allow gazebo to find the model/plugin files
+## Running sim: 
+1. Launch sim:
 ```
-export GAZEBO_MODEL_PATH=~/catkin_ws/src/purdue_lunabotics/lunabot_sim/mining_arena_gazebo/models:$GAZEBO_MODEL_PATH
-export GAZEBO_PLUGIN_PATH=~/catkin_ws/devel/lib:$GAZEBO_PLUGIN_PATH
+roslaunch lunabot_bringup sim.launch verbose:=true
+```
+> NOTE: if you get an error associated with a missing lib with the name skid_steer in it, uncomment the env export in gazebo.launch
 
-```
-3. Run with `gazebo arena.world` to visualize (ensure gazebo is installed)
+Options:
+`KSC_arena:=<true/false>`
+(Use KSC or UCF arena)
+
+Remove repeated warnings: append `2> >(grep -v TF_REPEATED_DATA buffer_core)` to the end of the command.
+
+(This won't print any lines with the words `TF_REPEATED_DATA` or `buffer_core`)
+>>>>>>> 883018c... moved env variables to launch file to avoid changes to user system
 
 ![sim_nav_gazebo](https://user-images.githubusercontent.com/41026849/163585429-cf9080de-40e7-4be1-9648-d75ab31ae4af.png)
 
