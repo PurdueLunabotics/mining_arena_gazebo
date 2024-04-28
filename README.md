@@ -1,14 +1,16 @@
 # mining_arena_gazebo
 Gazebo world environments for the NASA competition
 
+
 ## What's in here?
-Lunabotics 2021-2022 competition arena assets and world files
+Lunabotics 2023-2024 competition arena assets and world files
 
 ## Models
 - Apriltag assets
 - arena assets with correct dimensions
 ## Worlds
-- arena.world: Full arena with apriltags
+- arena_nasa.world: Kennedy space center Arena (2024 competition)
+- arena_ucf.world: UCF Arena (2024 competition)
 
 ## Running sim: 
 1. Launch sim:

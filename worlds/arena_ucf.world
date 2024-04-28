@@ -15,18 +15,19 @@
     <!-- apriltag localization board -->
     <include>
       <uri>model://apriltag_board</uri>
-      <pose>0 0 0.34 0 1.57 0</pose>
+      <pose>0.05 -1.8 0.34 0 1.57 0</pose>
     </include>
 
     <!-- arena frame boundary 
-    First 3.615m is obstacle zone.
-    Last 3.268 is excavation zone. 
+    Boundary: 6.88 m by 5 m (Kennedy Space Center Arena)
+    (See model.sdf in arena_frame folder)
     -->
     <include>
-      <uri>model://arena_frame</uri>
+      <uri>model://arena_frame_ucf</uri>
       <pose frame=''>0 0 0 0 -0 0</pose>
     </include>
 
+<!-- This defines the generated rock field.  -->
     <population name="obs_population1">
       <model name="obs1">
         <include>
@@ -34,11 +35,28 @@
           <uri>model://obstacle</uri>
         </include>
       </model>
-      <pose>3.0 0 0 0 0 0</pose>
+      <pose>3.27 1.1425 0 0 0 0</pose> <!-- Upper portion of field -->
       <box>
-        <size>2 2 0.01</size>
+        <size>6.34 2.37 0.1</size> <!-- Size of obstacle zone minus a small bit -->
       </box>
-      <model_count>3</model_count>
+      <model_count>5</model_count>
+      <distribution>
+        <type>random</type>
+      </distribution>
+    </population>
+
+    <population name="obs_population2">
+      <model name="obs2">
+        <include>
+          <static>true</static>
+          <uri>model://obstacle</uri>
+        </include>
+      </model>
+      <pose>5.57 -1.1425 0 0 0 0</pose> <!-- Lower portion of field -->
+      <box>
+        <size>6.34 2.37 0.1</size> <!-- Size of obstacle zone - a small bit -->
+      </box>
+      <model_count>4</model_count>
       <distribution>
         <type>random</type>
       </distribution>
