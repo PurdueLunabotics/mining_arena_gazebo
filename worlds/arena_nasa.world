@@ -12,10 +12,16 @@
       <uri>model://ground_plane</uri>
     </include>
 
-    <!-- apriltag localization board -->
+    <!-- apriltag localization board (start) -->
     <include>
       <uri>model://apriltag_board</uri>
       <pose>0.05 -2 0.34 0 1.57 0</pose>
+    </include>
+
+    <!-- berm -->
+    <include>
+      <uri>model://apriltag_board_2</uri>
+      <pose>6.15 -2.2 0.34 0 1.57 1.57</pose>
     </include>
 
     <!-- arena frame boundary 
@@ -39,7 +45,7 @@
       <box>
         <size>3.5 2.7 0.1</size> <!-- Size of obstacle zone minus a small bit -->
       </box>
-      <model_count>4</model_count>
+      <model_count>2</model_count>
       <distribution>
         <type>random</type>
       </distribution>
@@ -56,7 +62,7 @@
       <box>
         <size>2.7 2.7 0.1</size> <!-- Size of excavation zone - a small bit -->
       </box>
-      <model_count>3</model_count>
+      <model_count>2</model_count>
       <distribution>
         <type>random</type>
       </distribution>
@@ -73,7 +79,7 @@
       <box>
         <size>1.5 1.5 0.1</size> <!-- Size of small obstacle zone - a small bit -->
       </box>
-      <model_count>2</model_count>
+      <model_count>1</model_count>
       <distribution>
         <type>random</type>
       </distribution>
