@@ -23,10 +23,9 @@ Options:
 `KSC_arena:=<true/false>`
 (Use KSC or UCF arena)
 
-Remove repeated warnings: append `2> >(grep -v TF_REPEATED_DATA buffer_core)` to the end of the command.
+Remove repeated warnings: append `2> >(grep -Ev "TF_REPEATED_DATA|buffer_core|at line|^$")` to the end of the command.
 
 (This won't print any lines with the words `TF_REPEATED_DATA` or `buffer_core`)
->>>>>>> 883018c... moved env variables to launch file to avoid changes to user system
 
 ![sim_nav_gazebo](https://user-images.githubusercontent.com/41026849/163585429-cf9080de-40e7-4be1-9648-d75ab31ae4af.png)
 
