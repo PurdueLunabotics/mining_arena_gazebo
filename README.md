@@ -20,8 +20,9 @@ roslaunch lunabot_bringup sim.launch verbose:=true
 > NOTE: if you get an error associated with a missing lib with the name skid_steer in it, uncomment the env export in gazebo.launch
 
 Options:
-`KSC_arena:=<true/false>`
-(Use KSC or UCF arena)
+- `KSC_arena:=<true/false>`: Use KSC or UCF arena
+- `verbose:=<true/false>`: Runs with gazebo verbose
+- `debug:=<true/false>`: Runs with gdb
 
 Remove repeated warnings: append `2> >(grep -Ev "TF_REPEATED_DATA|buffer_core|at line|^$")` to the end of the command.
 
