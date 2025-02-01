@@ -18,12 +18,6 @@
       <pose>0.05 -2 0.34 0 1.57 0</pose>
     </include>
 
-    <!-- berm -->
-    <include>
-      <uri>model://apriltag_board_2</uri>
-      <pose>6.15 -2.2 0.34 0 1.57 1.57</pose>
-    </include>
-
     <!-- arena frame boundary 
     Boundary: 6.88 m by 5 m (Kennedy Space Center Arena)
     (See model.sdf in arena_frame folder)
@@ -45,7 +39,7 @@
       <box>
         <size>3.5 2.7 0.1</size> <!-- Size of obstacle zone minus a small bit -->
       </box>
-      <model_count>2</model_count>
+      <model_count>1</model_count>
       <distribution>
         <type>random</type>
       </distribution>
@@ -62,7 +56,7 @@
       <box>
         <size>2.7 2.7 0.1</size> <!-- Size of excavation zone - a small bit -->
       </box>
-      <model_count>2</model_count>
+      <model_count>1</model_count>
       <distribution>
         <type>random</type>
       </distribution>
