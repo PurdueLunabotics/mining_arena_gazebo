@@ -15,7 +15,7 @@
     <!-- apriltag localization board -->
     <include>
       <uri>model://apriltag_board</uri>
-      <pose>0.05 -1.8 0.34 0 1.57 0</pose>
+      <pose>0.05 1.785 0.34 0 1.57 0</pose>
     </include>
 
     <!-- arena frame boundary 
@@ -35,11 +35,11 @@
           <uri>model://obstacle</uri>
         </include>
       </model>
-      <pose>3.27 1.1425 0 0 0 0</pose> <!-- Upper portion of field -->
+      <pose>3.27 -1.1425 0 0 0 0</pose> <!-- Upper portion of field -->
       <box>
         <size>6.34 2.37 0.1</size> <!-- Size of obstacle zone minus a small bit -->
       </box>
-      <model_count>5</model_count>
+      <model_count>3</model_count>
       <distribution>
         <type>random</type>
       </distribution>
@@ -56,7 +56,7 @@
       <box>
         <size>6.34 2.37 0.1</size> <!-- Size of obstacle zone - a small bit -->
       </box>
-      <model_count>4</model_count>
+      <model_count>2</model_count>
       <distribution>
         <type>random</type>
       </distribution>
